@@ -1,0 +1,14 @@
+{
+	"name": "standaloneAppsServer",
+	"version": "1.0.0",
+	"description": "Express server for standalone-loading v4 apps",
+	"license": "",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "4.10.2",
+		"ejs": "2.5.7",
+		"glob": "7.1.2"
+	}
+}

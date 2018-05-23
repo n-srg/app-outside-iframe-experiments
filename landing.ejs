@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="<%= styles.common %>">
+    <link rel="stylesheet" type="text/css" href="<%= styles.app %>">
+</head>
+<body>
+    <script>
+        var __config = {
+            COMPANY_ID: '',
+            USER_ID: 'anonymous',
+            LOCALE: 'en-us',
+            ACCESS_TOKEN: '',
+            BASE_URL: '',
+            SENTRY_DSN: '',
+            ENVIRONMENT: 'development',
+            ENVIRONMENT_VARS: {}
+        };
+        var __app = {
+            id: '<%= app %>'
+        };
+        window.entryApp = '<%= app %>';
+    </script>
+    <script src="<%= runtime %>"></script>
+    <script src="<%= locale %>"></script>
+    <script src="<%= bundles.common %>"></script>
+    <header data-ts="TopBar"></header>
+        <main data-ts="Main">
+            <div data-ts="MainContent">
+                <div class="app-frame">
+                    <div id="root" name="main-app-iframe" ts-app="<%= app %>"></div>
+                    <script src="<%= bundles.app %>"></script>
+                </div>
+            </div>
+        </main>
+</body>
+</html>
